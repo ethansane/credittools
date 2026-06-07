@@ -2,9 +2,11 @@
 
 ## prerequisites
 1. a browser :)
-2. browser script plugin manager
+2. browser script plugin manager like [tampermonkey](https://www.tampermonkey.net/)
 
 ## how to use
-download or copy the scripts that u want within `scripts` folder
-1. download (ex: `/scripts/amex-offer.js`) OR copy the raw github link to the *.js file
-2. paste as new script into ur tampermonkey (or other script manager)
+click the install link for the script u want:
+
+1. [install amex offers add all](https://raw.githubusercontent.com/ethansane/credittools/main/scripts/amex-offer.user.js)
+
+tampermonkey should open its install screen automatically because the script is a `*.user.js` file. if it doesn't, copy the raw script into a new userscript manually.

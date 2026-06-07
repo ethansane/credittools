@@ -3,8 +3,8 @@
 // @namespace    https://github.com/ethansane/credittools
 // @version      1.0.0
 // @description  Adds a single-click control to add all available American Express offers to your card.
-// @updateURL    https://raw.githubusercontent.com/ethansane/credittools/main/scripts/amex-offer.js
-// @downloadURL  https://raw.githubusercontent.com/ethansane/credittools/main/scripts/amex-offer.js
+// @updateURL    https://raw.githubusercontent.com/ethansane/credittools/main/scripts/amex-offer.user.js
+// @downloadURL  https://raw.githubusercontent.com/ethansane/credittools/main/scripts/amex-offer.user.js
 // @match        https://*.americanexpress.com/*offers*
 // @match        https://americanexpress.com/*offers*
 // @match        https://global.americanexpress.com/*offers*
