@@ -6,8 +6,11 @@
 // @updateURL    https://raw.githubusercontent.com/ethansane/credittools/main/scripts/amex-offer.user.js
 // @downloadURL  https://raw.githubusercontent.com/ethansane/credittools/main/scripts/amex-offer.user.js
 // @match        https://*.americanexpress.com/*offers*
+// @match        https://*.americanexpress.com/*dashboard*
 // @match        https://americanexpress.com/*offers*
+// @match        https://americanexpress.com/*dashboard*
 // @match        https://global.americanexpress.com/*offers*
+// @match        https://global.americanexpress.com/*dashboard*
 // @run-at       document-idle
 // @grant        none
 // ==/UserScript==
@@ -26,6 +29,9 @@
 
   const ADD_BUTTON_SELECTORS = [
     'button[data-testid="merchantOfferListAddButton"]',
+    'button[title="Add to Card"][aria-label^="Add to card offer:" i]',
+    '[data-rowtype="offer"] button[title="Add to Card"]',
+    '[data-locator-id="merchantOffer"] button[title="Add to Card"]',
     'button[title="add to list card"]',
     'button[aria-label*="Add to Card" i]',
     'button[aria-label*="Add offer" i]',
@@ -74,7 +80,11 @@
 
     const testId = button.getAttribute("data-testid") || "";
     const title = button.getAttribute("title") || "";
+    const ariaLabel = button.getAttribute("aria-label") || "";
     if (testId === "merchantOfferListAddButton") return true;
+    if (title.toLowerCase() === "add to card" && /^add to card offer:/i.test(ariaLabel)) {
+      return true;
+    }
     if (title.toLowerCase() === "add to list card") return true;
 
     const text = textOf(button);

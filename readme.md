@@ -13,6 +13,6 @@ tampermonkey should open its install screen automatically because the script is 
 
 ## how to use
 1. login to amex
-2. go to the https://*.americanexpress.com/*offers* https://americanexpress.com/*offers* https://global.americanexpress.com/*offers* or whatever card u have
+2. go to the Amex offers page or the Amex dashboard page with the "Amex Offers & Benefits" section
 3. click the add all button in the corner
 4. offer button goes brrrrrrrrrrrrrrrrrrrt
